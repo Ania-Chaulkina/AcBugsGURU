@@ -11,7 +11,7 @@ export const test = base.extend ({
     },
     appAccount: async ({page}, use) => {
         const app = new App(page);
-        await page.goto(`${URL}account/?ec_page=login&account_error=login_failed/`);
+        await page.goto(`${URL}account/`);
         await use(app);
     },
 

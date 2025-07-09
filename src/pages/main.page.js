@@ -9,7 +9,10 @@ export class MainPage {
         this.addToCartButton = page.locator('#ec_add_to_cart_5');
         this.checkoutNowButton = page.getByRole('link', { name: 'CHECKOUT NOW' });
         this.viewCartButton = page.getByRole('link', { name: 'View Cart' });
+        this.bugReportQuestion = page.getByRole('heading', { name: 'What did you find out?' });
+        this.bugReportQuestionV2 = page.getByRole('heading', { name: '#1 Awesome! You found a bug. Pretty easy right?' });
         this.bugReportPopup = page.getByRole('heading', { name: 'You found a crash bug, examine the page by clicking on any button for 5 seconds.' });
+        //this.bugReportPopup = page.getByRole('heading', { name: 'You found 3 bugs.' });
 
     };
 
