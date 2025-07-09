@@ -4,6 +4,8 @@ export class MainPage {
     constructor(page){
         this.page = page;
         //this.findBugsPopUp = page.getByRole('link', { name: 'Find Bugs' });
+        this.deleteCart = page.locator('#ec_cartitem_delete_1997978');
+        this.returnStoreButton = page.getByRole('link', { name: 'RETURN TO STOR      E' });
         this.productSortPerpage = page.getByRole('link', { name: '10' });
         this.yellowShoesProduct = page.locator('#ec_product_image_effect_4481370').getByRole('link');
         this.addToCartButton = page.locator('#ec_add_to_cart_5');
@@ -32,6 +34,13 @@ export class MainPage {
     return test.step('Кликаем по кнопке перехода в корзину', async()=> {
         await this.addToCartButton.click();
         await this.viewCartButton.click();
+    })
+   };
+
+   async deleteShoes() {
+    return test.step('Находим расположенное не по центру название кнопки Sing In', async () => {
+        await this.deleteCart.click();
+        await this.returnStoreButton.click();
     })
    };
 

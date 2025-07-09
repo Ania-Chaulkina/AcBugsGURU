@@ -4,7 +4,7 @@ export class AccountPage {
     constructor(page){
         this.page = page;
         this.password = page.getByText('Password*');
-        this.currencyDropDown = page.locator('#ec_currency_conversion').selectOption('GBP');
+        //this.currencyDropDown = page.locator('#ec_currency_conversion');
         this.singInButton = page.getByRole('button', { name: 'SIGN IN' });
         this.bugReportQuestionV2 = page.getByRole('heading', { name: '#1 Awesome! You found a bug. Pretty easy right?' });
         this.bugReportQuestion = page.getByRole('heading', { name: 'What did you find out?' });
@@ -22,6 +22,13 @@ export class AccountPage {
         await this.singInButton.click();
     })
    };
+
+   /*async selectCurrency(currency = 'EUR') {
+    return test.step('Находим расположенное не по центру название кнопки Sing In', async () => {
+        await this.currencyDropDown.selectOption(currency);
+    })
+    };*/
+
 
    /*async clickOnCurrency() {
     return test.step('Меняем валюту', async () => {
