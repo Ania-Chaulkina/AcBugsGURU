@@ -12,13 +12,13 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
     test.only('Меняем валюту', async ({appProduct}) => {
         await appProduct.product.clickOnCurrency(appProduct);
         await appProduct.product.clickChangeCurrency(appProduct);
-        await expect (appProduct.product.awesomeBugReportPopup).toBeVisible({ timeout: 10000 });
+        await expect (appProduct.product.BugReportPopup).toBeVisible();
 
     });
 
     test('Расположение кнопки Sing In на странице продукта', async ({appProduct}) => {
         await appProduct.product.clickOnSingInBug(appProduct)
-        await expect (appProduct.product.awesomebugReportPopup).toBeVisible();
+        await expect (appProduct.product.bugReportPopup).toBeVisible();
 
     });
 
