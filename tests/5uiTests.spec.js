@@ -21,9 +21,10 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
 
     });
 
-    test('Переход в корзину после добавления товара', async ({appMain}) => {
+    test.only('Возврат к покупкам после удаления очистки корзины', async ({appMain}) => {
         await appMain.main.clickOnViewCart(appMain);
-        await expect (appMain.main.bugReportQuestionV2).toBeVisible()
+        await appMain.main.deleteShoes(appMain);
+        await expect (appMain.main.bugReportQuestion).toBeVisible()
 
     });
 
