@@ -9,7 +9,7 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
         
     });
 
-    test.only('Меняем валюту', async ({appProduct}) => {
+    test('Меняем валюту', async ({appProduct}) => {
         await appProduct.product.clickOnCurrency(appProduct);
         //await appProduct.product.clickChangeCurrency(appProduct);
         await expect (appProduct.product.BugReportPopup).toBeVisible();
