@@ -11,7 +11,7 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
 
     test.only('Меняем валюту', async ({appProduct}) => {
         await appProduct.product.clickOnCurrency(appProduct);
-        await appProduct.product.clickChangeCurrency(appProduct);
+        //await appProduct.product.clickChangeCurrency(appProduct);
         await expect (appProduct.product.BugReportPopup).toBeVisible();
 
     });
@@ -30,7 +30,7 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
 
     test('Расположение названия поля Password', async ({appAccount}) => {
         await appAccount.account.clickPasswordBug(appAccount);
-        await expect (appAccount.account.bugReportPopup).toBeVisible()
+        await expect (appAccount.account.bugReportQuestion).toBeVisible()
 
     });
 
