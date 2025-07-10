@@ -39,7 +39,7 @@ export class MainPage {
    };
 
    async deleteShoes() {
-    return test.step('Возврат к покупкам после удаления очистки корзины', async () => {
+    return test.step('Возврат к покупкам после очистки корзины', async () => {
         await this.page.waitForResponse(`${URL}my-cart/`);
         await this.deleteCart.click();
         await this.returnStoreButton.click();
