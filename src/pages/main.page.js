@@ -1,4 +1,5 @@
 import {test} from '../helpers/fixture/index';
+import {URL} from '../helpers/fixture'
 export class MainPage {
 
     constructor(page){
@@ -39,6 +40,7 @@ export class MainPage {
 
    async deleteShoes() {
     return test.step('Находим расположенное не по центру название кнопки Sing In', async () => {
+        await this.page.waitForResponse(`${URL}my-cart/`);
         await this.deleteCart.click();
         await this.returnStoreButton.click();
     })
