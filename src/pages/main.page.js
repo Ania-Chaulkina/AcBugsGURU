@@ -39,7 +39,7 @@ export class MainPage {
    };
 
    async deleteShoes() {
-    return test.step('Находим расположенное не по центру название кнопки Sing In', async () => {
+    return test.step('Возврат к покупкам после очистки корзины', async () => {
         await this.page.waitForResponse(`${URL}my-cart/`);
         await this.deleteCart.click();
         await this.returnStoreButton.click();
