@@ -2,7 +2,6 @@ import {test} from '../helpers/fixture/index';
 export class ProductPage {
     constructor(page){
         this.page = page; 
-        //this.currencyDropDown = page.locator('#ec_currency_conversion').selectOption('GBP');
         this.singInButton = page.getByRole('button', { name: 'SIGN IN' });
         this.bugReportPopup = page.getByRole('heading', { name: 'You found a crash bug,' });
         this.cookie = page.getByRole('button', { name: 'Functional only' });

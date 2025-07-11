@@ -11,7 +11,7 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
 
     test('Кнопка Sing In /account/', async ({appAccount}) => {
         await appAccount.account.clickSingInBug(appAccount);
-        await expect (appAccount.account.bugReportQuestionV2).toBeVisible({timeout: 10000});
+        await expect (appAccount.account.bugReportQuestionV2).toBeVisible();
 
     });
 

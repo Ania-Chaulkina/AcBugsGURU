@@ -4,7 +4,6 @@ export class MainPage {
 
     constructor(page){
         this.page = page;
-        //this.findBugsPopUp = page.getByRole('link', { name: 'Find Bugs' });
         this.deleteCart = page.locator('#ec_cartitem_delete_1997978');
         this.returnStoreButton = page.getByRole('link', { name: 'RETURN TO STOR      E' });
         this.productSortPerpage = page.getByRole('link', { name: '10' });
@@ -15,8 +14,6 @@ export class MainPage {
         this.bugReportQuestion = page.getByRole('heading', { name: 'What did you find out?' });
         this.bugReportQuestionV2 = page.getByRole('heading', { name: '#1 Awesome! You found a bug. Pretty easy right?' });
         this.bugReportPopup = page.getByRole('heading', { name: 'You found a crash bug, examine the page by clicking on any button for 5 seconds.' });
-        //this.bugReportPopup = page.getByRole('heading', { name: 'You found 3 bugs.' });
-
     };
 
     async clickOnSortPerpage(){
