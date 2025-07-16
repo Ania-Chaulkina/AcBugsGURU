@@ -13,6 +13,7 @@ test.describe('5 UI тестов на поиск ошибок', async () => {
         await appAccount.account.clickSingInBug(appAccount);
         await expect (appAccount.account.bugReportQuestionV2).toBeVisible();
 
+
     });
 
     test('Расположение кнопки Sing In на странице продукта', async ({appProduct}) => {
